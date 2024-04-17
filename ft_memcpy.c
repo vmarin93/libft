@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 15:04:00 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/17 13:19:12 by vmarin           ###   ########.fr       */
+/*   Created: 2024/04/17 12:59:43 by vmarin            #+#    #+#             */
+/*   Updated: 2024/04/17 14:04:48 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t		i;
 
+	if (dest == NULL)
+		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
-	return (i);
+	}
+	return (dest);
 }
