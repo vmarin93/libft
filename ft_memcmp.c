@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 19:33:06 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/18 19:33:04 by vmarin           ###   ########.fr       */
+/*   Created: 2024/04/18 18:15:02 by vmarin            #+#    #+#             */
+/*   Updated: 2024/04/18 20:05:47 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strrchr(const char *s, int c)
-{
-	int	i;
-
-	i = ft_strlen(s);
-	while (i > 0)
+	while (i < n)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
-	return (NULL);
+	if (i < n)
+		return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	return (0);
 }
