@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 13:17:38 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/18 21:29:18 by vmarin           ###   ########.fr       */
+/*   Created: 2024/04/18 20:08:34 by vmarin            #+#    #+#             */
+/*   Updated: 2024/04/18 21:47:25 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
+	if (!little)
+		return ((char *)big);
 	i = 0;
-	while (i < n && s1[i] != '\0')
+	while (i < len && big[i] != '\0')
 	{
-		if (s1[i] != s2[i])
+		j = 0;
+		while (little[j] != '\0' && big[i + j] != '\0')
 		{
-			return (s1[i] - s2[i]);
+			if (little[j] != big[i + j])
+				break ;
+			j++;
 		}
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
 		i++;
 	}
-	if (i < n)
-		return (s1[i] - s2[i]);
-	return (0);
+	return (NULL);
 }
