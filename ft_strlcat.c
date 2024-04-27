@@ -6,45 +6,47 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:11:09 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/23 20:38:22 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/27 20:33:36 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
+	size_t	dst_offset;
 	size_t	src_len;
 	size_t	dst_len;
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
-	i = 0;
-	j = dst_len;
-	if (size > 0)
+	if (dst_len >= size)
+		dst_len = size;
+	if (dst_len == size)
+		return (src_len + dst_len);
+	dst_offset = dst_len;
+	if (src_len < size - dst_len)
 	{
-		while (src[i] != '\0')
+		i = 0;
+		while (i <= src_len)
 		{
-			dst[j] = src[i];
-			j++;
+			dst[dst_offset] = src[i];
 			i++;
-			if (j == size - 1)
-				break ;
+			dst_offset++;
 		}
 	}
-	dst[j] = '\0';
+	else
+	{
+		i = 0;
+		while (i < size - dst_len - 1)
+		{
+			dst[dst_offset] = src[i];
+			i++;
+			dst_offset++;
+		}
+		dst[size - 1] = '\0';
+	}
 	return (src_len + dst_len);
 }
