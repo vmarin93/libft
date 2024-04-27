@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:46:38 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/17 17:07:48 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:38:29 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

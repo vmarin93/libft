@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 18:15:02 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/18 20:05:47 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:35:36 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

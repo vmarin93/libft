@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:28:41 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/17 15:40:14 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:35:50 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

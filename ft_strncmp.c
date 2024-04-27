@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 13:17:38 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/18 21:29:18 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:38:38 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

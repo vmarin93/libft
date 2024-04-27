@@ -6,11 +6,14 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:11:09 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/17 17:44:26 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:38:22 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(char *str)
+#include <stddef.h>
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -20,7 +23,7 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-size_t	strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;

@@ -6,16 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:54:20 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/19 15:45:04 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 22:07:38 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isspace(char c)
 {

@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:04:00 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/17 13:19:12 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:38:33 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {

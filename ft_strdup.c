@@ -6,11 +6,12 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:42:13 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/19 19:13:17 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:38:07 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stddef.h>
 
 char	*ft_strdup(const char *s)
 {

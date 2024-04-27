@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 19:01:36 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/17 19:30:29 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:37:59 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {

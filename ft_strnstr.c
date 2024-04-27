@@ -6,9 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:08:34 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/18 21:47:25 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:38:46 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
