@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 19:01:36 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/27 14:18:12 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/28 17:46:44 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 	char	to_find;
 
 	to_find = (char)c;

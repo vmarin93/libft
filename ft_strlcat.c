@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:11:09 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/27 20:33:36 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/28 18:09:12 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	dst_offset;
 	size_t	src_len;
 	size_t	dst_len;
 
@@ -26,26 +24,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst_len = size;
 	if (dst_len == size)
 		return (src_len + dst_len);
-	dst_offset = dst_len;
 	if (src_len < size - dst_len)
 	{
-		i = 0;
-		while (i <= src_len)
-		{
-			dst[dst_offset] = src[i];
-			i++;
-			dst_offset++;
-		}
+		ft_memcpy(dst + dst_len, src, src_len + 1);
 	}
 	else
 	{
-		i = 0;
-		while (i < size - dst_len - 1)
-		{
-			dst[dst_offset] = src[i];
-			i++;
-			dst_offset++;
-		}
+		ft_memcpy(dst + dst_len, src, size - dst_len - 1);
 		dst[size - 1] = '\0';
 	}
 	return (src_len + dst_len);

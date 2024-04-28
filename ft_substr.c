@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:16:38 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/27 23:33:51 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/28 18:12:13 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
+	char		*substr;
 	size_t		i;
 
 	if (s == NULL)
