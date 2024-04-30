@@ -45,6 +45,8 @@ char	*ft_strtrim(char const *s1, char const *set)
     if (start > end)
         return (ft_strdup(""));
     result = ft_calloc(sizeof(char), ((end - start) + 1));
+    if (result == NULL)
+        return (NULL);
     i = 0;
     while (start + i < end)
     {
