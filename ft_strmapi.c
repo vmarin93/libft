@@ -6,6 +6,8 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     char    *result;
     size_t  i;
 
+    if (!s)
+        return (NULL);
     result = ft_calloc(ft_strlen(s) + 1, sizeof(char));
     if (result == NULL)
         return (NULL);

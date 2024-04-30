@@ -31,6 +31,8 @@ char    **ft_split(char const *s, char c)
     size_t  i;
     size_t  j;
 
+    if (!s)
+        return (NULL);
     matrix = ft_calloc(get_matrix_size(s, c) + 1, sizeof(char *));
     if (matrix == NULL)
         return (NULL);
