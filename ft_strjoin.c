@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:52:50 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/28 17:52:57 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/30 17:13:46 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-    if (!s1)
-        return ((char *)s2);
-    if  (!s2)
-    {
-        return ((char *)s1);
-    }
+	if (!s1)
+		return ((char *)s2);
+	if (!s2)
+		return ((char *)s1);
 	result = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (result == NULL)
 		return (NULL);

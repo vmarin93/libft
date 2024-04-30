@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:13:14 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/28 22:44:40 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/04/30 17:20:09 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,29 +29,29 @@ int	is_in_set(char const c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-    char    *result;
-    size_t  start;
-    size_t  end;
-    size_t  i;
+	char	*result;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
-    if (!s1 || !set)
-        return (NULL);
-    start = 0;
-    end = ft_strlen(s1);
-    while (s1[start] && is_in_set(s1[start], set))
-        start++;
-    while (s1[end - 1] && is_in_set(s1[end - 1], set))
-        end--;
-    if (start > end)
-        return (ft_strdup(""));
-    result = ft_calloc(sizeof(char), ((end - start) + 1));
-    if (result == NULL)
-        return (NULL);
-    i = 0;
-    while (start + i < end)
-    {
-        result[i] = s1[start + i];
-        i++;
-    }
-    return (result);
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	end = ft_strlen(s1);
+	while (s1[start] && is_in_set(s1[start], set))
+		start++;
+	while (s1[end - 1] && is_in_set(s1[end - 1], set))
+		end--;
+	if (start > end)
+		return (ft_strdup(""));
+	result = ft_calloc(sizeof(char), ((end - start) + 1));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	while (start + i < end)
+	{
+		result[i] = s1[start + i];
+		i++;
+	}
+	return (result);
 }
