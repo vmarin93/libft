@@ -6,11 +6,12 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 16:08:37 by vmarin            #+#    #+#             */
-/*   Updated: 2024/05/01 18:29:40 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:33:16 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdint.h>
 #include <stddef.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
