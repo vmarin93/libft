@@ -6,14 +6,14 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 17:08:05 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/30 22:02:50 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:15:56 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-int	get_int_len(int n)
+static int	get_int_len(int n)
 {
 	int	len;
 
@@ -35,7 +35,7 @@ int	get_int_len(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int	i;
+	int		i;
 
 	str = ft_calloc(get_int_len(n) + 1, sizeof(char));
 	if (str == NULL)

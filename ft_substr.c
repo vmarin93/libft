@@ -6,11 +6,10 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 19:16:38 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/28 18:12:13 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:31:42 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stddef.h>
 #include "libft.h"
 
@@ -27,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	if (start + len > ft_strlen(s))
 		len = ft_strlen(s + start);
-	substr = malloc(len + 1 * sizeof(char));
+	substr = ft_calloc(len + 1, sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	i = 0;
@@ -36,6 +35,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr[i] = s[start + i];
 		i++;
 	}
-	substr[i] = '\0';
 	return (substr);
 }

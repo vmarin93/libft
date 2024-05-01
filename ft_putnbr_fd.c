@@ -6,13 +6,13 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 17:33:42 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/30 17:42:44 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:30:37 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	do_putnbr(int n, int fd)
+static void	do_putnbr(int n, int fd)
 {
 	char	digit;
 

@@ -6,13 +6,13 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:54:20 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/23 22:07:38 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:15:08 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);

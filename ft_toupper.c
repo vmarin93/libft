@@ -6,11 +6,9 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:46:44 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/22 19:25:23 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:28:39 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

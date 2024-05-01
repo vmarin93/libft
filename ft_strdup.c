@@ -6,11 +6,10 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:42:13 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/27 23:13:09 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:17:02 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stddef.h>
 #include "libft.h"
 

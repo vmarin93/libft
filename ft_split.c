@@ -6,14 +6,14 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 17:28:36 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/30 17:49:07 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:16:42 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-int	get_matrix_size(char const *s, char c)
+static int	get_matrix_size(char const *s, char c)
 {
 	int	matrix_size;
 	int	flag;
@@ -36,7 +36,7 @@ int	get_matrix_size(char const *s, char c)
 	return (matrix_size);
 }
 
-void	fill_matrix(char const *s, char c, char **matrix)
+static void	fill_matrix(char const *s, char c, char **matrix)
 {
 	int		offset;
 	size_t	i;

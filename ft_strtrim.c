@@ -6,14 +6,14 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 18:13:14 by vmarin            #+#    #+#             */
-/*   Updated: 2024/04/30 17:20:09 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/01 18:27:32 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-int	is_in_set(char const c, char const *set)
+static int	is_in_set(char const c, char const *set)
 {
 	size_t	i;
 
