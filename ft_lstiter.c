@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 21:11:12 by vmarin            #+#    #+#             */
-/*   Updated: 2024/05/02 20:17:33 by vmarin           ###   ########.fr       */
+/*   Created: 2024/05/02 18:01:05 by vmarin            #+#    #+#             */
+/*   Updated: 2024/05/02 18:52:25 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*travel;
+	t_list	*current;
 
-	if (!lst)
-		return (NULL);
-	travel = lst;
-	while (travel->next != NULL)
-		travel = travel->next;
-	return (travel);
+	if (!lst || !f)
+		return ;
+	current = lst;
+	while (current != NULL)
+	{
+		f(current->content);
+		current = current->next;
+	}
 }

@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/01 21:11:12 by vmarin            #+#    #+#             */
-/*   Updated: 2024/05/02 20:17:33 by vmarin           ###   ########.fr       */
+/*   Created: 2024/05/02 15:18:16 by vmarin            #+#    #+#             */
+/*   Updated: 2024/05/02 20:13:34 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stdlib.h>
+#include <stddef.h>
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*travel;
+	t_list	*current;
+	t_list	*temp;
 
-	if (!lst)
-		return (NULL);
-	travel = lst;
-	while (travel->next != NULL)
-		travel = travel->next;
-	return (travel);
+	if (!lst || !del)
+		return ;
+	current = *lst;
+	while (current != NULL)
+	{
+		temp = current->next;
+		del(current->content);
+		free(current);
+		current = temp;
+	}
+	*lst = NULL;
 }
