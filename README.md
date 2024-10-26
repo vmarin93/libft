@@ -2,11 +2,11 @@
 
 ## Overview
 
-**Libft** is my custom implementation of the C standard library. This project has been a deep dive into the fundamental workings of core C functions. Building this library has given me a stronger understanding of variables, arrays, strings, and how to use these elements together to build useful applications.
+**Libft** is my custom implementation of the C standard library. This project has been a deep dive into the fundamental workings of core C functions. Building this library has given me a stronger understanding of variables, arrays, strings, and how to use these elements together to build useful applications. I have also had to think deeply about function interfaces, error handling, and memory safety.
 
 ## Purpose and Lessons Learned
 
-The main purpose of creating **libft** has been to improve my C programming skills by building each function from scratch. This project has taught me a lot about how even the simplest functions, like `ft_strlen` (to count the length of a string) or `ft_memset` (to set memory values), play a crucial role in more complex applications. I’ve also had to think deeply about function interfaces, error handling, and memory safety.
+I have written the ***libft*** project as part of my curriculum for 42London.
 
 Through this project, I've come to appreciate the strict syntax and memory management required in C.
 
