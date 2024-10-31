@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:05:12 by vmarin            #+#    #+#             */
-/*   Updated: 2024/05/02 20:16:16 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/05/09 17:54:56 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
-void	ft_lstadd_back(t_list **lst, t_list *new_node);
-void	ft_lstadd_front(t_list **lst, t_list *new_node);
+void	ft_lstadd_back(t_list **lst, t_list *new_lst);
+void	ft_lstadd_front(t_list **lst, t_list *new_lst);
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
@@ -46,8 +46,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+int		ft_putunbr_fd(unsigned int n, int fd);
+int		ft_puthexnbr_fd(unsigned int n, int fd, int uppercase);
+int		ft_putulhexnbr_fd(unsigned long int n, int fd, int uppercase);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
