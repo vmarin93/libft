@@ -2,17 +2,9 @@
 
 ## Overview
 
-**Libft** is my custom implementation of the C standard library. This project has been a deep dive into the fundamental workings of core C functions. Building this library has given me a stronger understanding of variables, arrays, strings, and how to use these elements together to build useful applications. I have also had to think deeply about function interfaces, error handling, and memory safety.
-
-## Purpose and Lessons Learned
-
-I have written the ***libft*** project as part of my curriculum for 42London.
-
-Through this project, I've come to appreciate the strict syntax and memory management required in C.
+**Libft** is my custom implementation of the C standard library. This project has been a deep dive into the fundamental workings of core C functions. Building this library has given me a stronger understanding of variables, arrays and strings. I have also had to think deeply about function interfaces, error handling, and memory safety. I have written the ***libft*** project as part of my curriculum for 42London.
 
 ## Implemented Functions
-
-Here’s a summary of the main functions I’ve implemented:
 
 ### Character Classification and Conversion
 - **`ft_isalpha`**, **`ft_isdigit`**, **`ft_isalnum`**, **`ft_isascii`**, **`ft_isprint`** – Check if a character meets certain criteria (e.g., alphabetic, digit).
@@ -31,8 +23,8 @@ Here’s a summary of the main functions I’ve implemented:
 
 ### Conversion Functions
 Functions to convert between data types:
-- **`ft_atoi`** – Convert a string to an integer, handling edge cases with care.
-- **`ft_itoa`** – Convert an integer to a string, which has been a good exercise in number manipulation.
+- **`ft_atoi`** – Convert a string to an integer.
+- **`ft_itoa`** – Convert an integer to a string.
 
 ### File Descriptor Output
 - **`ft_putchar_fd`**, **`ft_putstr_fd`**, **`ft_putendl_fd`**, **`ft_putnbr_fd`** – Output characters, strings, and integers, supporting multiple use cases.
@@ -55,7 +47,7 @@ The library can be compiled with `make`:
 To use this library in a project, include it with:
 
 ```bash
-gcc -o my_program my_program.c -L. -lft
+gcc -o my_program my_program.c -L. -libft.a
 ```
 
 This command links the custom **libft** with your program, providing access to all implemented functions.
