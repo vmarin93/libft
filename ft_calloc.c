@@ -27,18 +27,18 @@ void	*ft_calloc(size_t nmemb, size_t size)
     void	*ptr;
     size_t	i;
 
-    if (SIZE_MAX / nmemb >= size) // Check for overflow
+    if (SIZE_MAX / nmemb >= size)
     {
-        ptr = malloc(nmemb * size); // Allocate memory
+        ptr = malloc(nmemb * size);
         if (!ptr)
             return (NULL);
         i = 0;
-        while (i < nmemb * size) // Initialize memory to zero
+        while (i < nmemb * size)
         {
             ((char *)ptr)[i] = 0;
             i++;
         }
         return (ptr);
     }
-    return (NULL); // Return NULL if overflow
+    return (NULL);
 }
