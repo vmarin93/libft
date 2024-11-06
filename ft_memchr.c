@@ -12,20 +12,30 @@
 
 #include <stddef.h>
 
+/*
+ * Locates the first occurrence of 'c' (converted to an unsigned char) in
+ * string 's'. Returns a pointer to the byte, or NULL if the byte is not found
+ * within the first 'n' bytes.
+ *
+ * @param s The memory area to search.
+ * @param c The byte to search for.
+ * @param n The number of bytes to search.
+ * @return A pointer to the matching byte or NULL if not found.
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*str;
-	unsigned char	to_find;
+    size_t			i;
+    unsigned char	*str;
+    unsigned char	to_find;
 
-	str = (unsigned char *)s;
-	to_find = c;
-	i = 0;
-	while (i < n)
-	{
-		if (str[i] == to_find)
-			return (str + i);
-		i++;
-	}
-	return (NULL);
+    str = (unsigned char *)s;
+    to_find = c;
+    i = 0;
+    while (i < n)
+    {
+        if (str[i] == to_find)
+            return (str + i);
+        i++;
+    }
+    return (NULL);
 }
