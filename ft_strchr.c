@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <wchar.h>
 #include "libft.h"
 
 /*
@@ -18,22 +19,23 @@
  *
  * @param s The string to search.
  * @param c The character to locate.
- * @return A pointer to the first occurrence of 'c' in 's', or NULL if 'c' is not found.
+ * @return A pointer to the first occurrence of 'c' in 's',
+ * or NULL if 'c' is not found.
  */
 char	*ft_strchr(const char *s, int c)
 {
-    int		i;
-    int		len;
-    char	to_find;
+	int		i;
+	int		len;
+	char	to_find;
 
-    to_find = (char)c;
-    len = ft_strlen(s);
-    i = 0;
-    while (i < len + 1)
-    {
-        if (s[i] == to_find)
-            return ((char *)s + i);
-        i++;
-    }
-    return (NULL);
+	to_find = (char)c;
+	len = ft_strlen(s);
+	i = 0;
+	while (i < len + 1)
+	{
+		if (s[i] == to_find)
+			return ((char *)s + i);
+		i++;
+	}
+	return (NULL);
 }

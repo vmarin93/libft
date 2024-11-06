@@ -20,26 +20,26 @@
  */
 int	ft_atoi(const char *nptr)
 {
-    int	i;
-    int	number;
-    int	sign;
+	int	i;
+	int	number;
+	int	sign;
 
-    number = 0;
-    sign = 1;
-    i = 0;
-    while (ft_isspace(nptr[i]))
-        i++;
-    if (nptr[i] == '-' || nptr[i] == '+')
-    {
-        if (nptr[i] == '-')
-            sign *= -1;
-        i++;
-    }
-    while (ft_isdigit(nptr[i]))
-    {
-        number *= 10;
-        number += nptr[i] - '0';
-        i++;
-    }
-    return (number * sign);
+	number = 0;
+	sign = 1;
+	i = 0;
+	while (ft_isspace(nptr[i]))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (ft_isdigit(nptr[i]))
+	{
+		number *= 10;
+		number += nptr[i] - '0';
+		i++;
+	}
+	return (number * sign);
 }

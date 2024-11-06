@@ -12,14 +12,14 @@
 
 /*
  * Checks if the given character is a digit (0-9).
- * 
+ *
  * @param c The character to be checked.
- * 
+ *
  * @return 2048 if the character is a digit, 0 otherwise.
  */
 int	ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-        return (2048);
-    return (0);
+	if (c >= '0' && c <= '9')
+		return (2048);
+	return (0);
 }

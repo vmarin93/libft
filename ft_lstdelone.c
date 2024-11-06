@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 /*
  * Deletes the given node and frees the memory of the node's content using the
@@ -23,9 +23,9 @@
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!lst || !del)
-        return ;
-    del(lst->content);
-    free(lst);
-    lst = NULL;
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }

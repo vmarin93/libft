@@ -12,14 +12,14 @@
 
 /*
  * Checks if the given character is printable, including space.
- * 
+ *
  * @param c The character to be checked.
- * 
+ *
  * @return 16384 if the character is printable, 0 otherwise.
  */
 int	ft_isprint(int c)
 {
-    if (c >= 32 && c < 127)
-        return (16384);
-    return (0);
+	if (c >= 32 && c < 127)
+		return (16384);
+	return (0);
 }

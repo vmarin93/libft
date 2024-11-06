@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
 
 /*
  * Locates the last occurrence of 'c' (converted to a char) in the string 's'.
@@ -19,20 +19,21 @@
  *
  * @param s The string to be searched.
  * @param c The character to locate.
- * @return A pointer to the last occurrence of 'c' in 's', or NULL if 'c' is not found.
+ * @return A pointer to the last occurrence of 'c' in 's',
+ * or NULL if 'c' is not found.
  */
 char	*ft_strrchr(const char *s, int c)
 {
-    int		i;
-    char	to_find;
+	int		i;
+	char	to_find;
 
-    to_find = (char)c;
-    i = ft_strlen(s);
-    while (i >= 0)
-    {
-        if (s[i] == to_find)
-            return ((char *)s + i);
-        i--;
-    }
-    return (NULL);
+	to_find = (char)c;
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == to_find)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
 }

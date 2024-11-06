@@ -15,11 +15,11 @@
  *
  * @param c The character to be converted.
  * @return The uppercase equivalent of the character if it is lowercase,
- *         otherwise returns the character unchanged.
+ * otherwise returns the character unchanged.
  */
 int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        c -= 32;
-    return (c);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

@@ -14,28 +14,30 @@
 #include "libft.h"
 
 /*
- * Applies the function 'f' to each character of the string 's' to create a new string
+ * Applies the function 'f' to each character of the string 's'
+ * creates a new string
  * resulting from successive applications of 'f'.
  *
  * @param s The input string.
  * @param f The function to apply to each character.
- * @return A new string resulting from the application of 'f', or NULL if allocation fails.
+ * @return A new string resulting from the application of 'f',
+ * or NULL if allocation fails.
  */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char	*result;
-    size_t	i;
+	char	*result;
+	size_t	i;
 
-    if (!s)
-        return (NULL);
-    result = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-    if (result == NULL)
-        return (NULL);
-    i = 0;
-    while (s[i] != '\0')
-    {
-        result[i] = f(i, s[i]);
-        i++;
-    }
-    return (result);
+	if (!s)
+		return (NULL);
+	result = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	return (result);
 }

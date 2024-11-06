@@ -24,18 +24,18 @@
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t			i;
-    unsigned char	*str;
-    unsigned char	to_find;
+	size_t			i;
+	unsigned char	*str;
+	unsigned char	to_find;
 
-    str = (unsigned char *)s;
-    to_find = c;
-    i = 0;
-    while (i < n)
-    {
-        if (str[i] == to_find)
-            return (str + i);
-        i++;
-    }
-    return (NULL);
+	str = (unsigned char *)s;
+	to_find = c;
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == to_find)
+			return (str + i);
+		i++;
+	}
+	return (NULL);
 }

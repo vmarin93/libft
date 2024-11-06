@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stddef.h>
+#include <unistd.h>
 
 /*
  * Outputs the string 's' to the given file descriptor.
@@ -21,14 +21,14 @@
  */
 void	ft_putstr_fd(char *s, int fd)
 {
-    size_t	i;
+	size_t	i;
 
-    if (!s)
-        return ;
-    i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, s + i, sizeof(char));
-        i++;
-    }
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, s + i, sizeof(char));
+		i++;
+	}
 }

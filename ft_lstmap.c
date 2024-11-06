@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
 
 /*
- * Iterates the list 'lst' and applies the function 'f' to the content of each node.
+ * Iterates the list 'lst' and applies the function 'f'
+ * to the content of each node.
  * Creates a new list resulting from the successive applications of 'f'.
  * The 'del' function is used to delete the content of a node if needed.
  *
@@ -25,22 +26,22 @@
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list	*new_list;
-    t_list	*diff_node;
+	t_list	*new_list;
+	t_list	*diff_node;
 
-    if (!lst || !f || !del)
-        return (NULL);
-    new_list = NULL;
-    while (lst != NULL)
-    {
-        diff_node = ft_lstnew(f(lst->content));
-        if (!diff_node)
-        {
-            ft_lstclear(&new_list, del);
-            return (NULL);
-        }
-        ft_lstadd_back(&new_list, diff_node);
-        lst = lst->next;
-    }
-    return (new_list);
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = NULL;
+	while (lst != NULL)
+	{
+		diff_node = ft_lstnew(f(lst->content));
+		if (!diff_node)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, diff_node);
+		lst = lst->next;
+	}
+	return (new_list);
 }

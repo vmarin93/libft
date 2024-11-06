@@ -15,11 +15,11 @@
  *
  * @param c The character to be converted.
  * @return The lowercase equivalent of the character if it is uppercase,
- *         otherwise returns the character unchanged.
+ * otherwise returns the character unchanged.
  */
 int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
