@@ -6,18 +6,11 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:54:20 by vmarin            #+#    #+#             */
-/*   Updated: 2024/05/01 18:15:08 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/11/06 10:21:29 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(char c)
-{
-	if ((c >= 9 && c <= 13) || c == 32)
-		return (1);
-	return (0);
-}
 
 int	ft_atoi(const char *nptr)
 {

@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:05:12 by vmarin            #+#    #+#             */
-/*   Updated: 2024/05/09 17:54:56 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/11/06 10:22:08 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
+int		ft_isspace(char c);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new_lst);
 void	ft_lstadd_front(t_list **lst, t_list *new_lst);
