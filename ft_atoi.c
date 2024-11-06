@@ -6,7 +6,7 @@
 /*   By: vmarin <vmarin@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:54:20 by vmarin            #+#    #+#             */
-/*   Updated: 2024/11/06 10:21:29 by vmarin           ###   ########.fr       */
+/*   Updated: 2024/11/06 12:23:38 by vmarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 /*
  * Converts a string to an integer.
- * Skips leading whitespaces, handles optional sign, and processes numeric characters.
+ *
+ * @param nptr The string to be converted.
+ * @return The converted integer.
  */
 int	ft_atoi(const char *nptr)
 {
@@ -25,19 +27,19 @@ int	ft_atoi(const char *nptr)
     number = 0;
     sign = 1;
     i = 0;
-    while (ft_isspace(nptr[i])) // Skip whitespace characters
+    while (ft_isspace(nptr[i]))
         i++;
-    if (nptr[i] == '-' || nptr[i] == '+') // Handle optional sign
+    if (nptr[i] == '-' || nptr[i] == '+')
     {
         if (nptr[i] == '-')
             sign *= -1;
         i++;
     }
-    while (ft_isdigit(nptr[i])) // Process numeric characters
+    while (ft_isdigit(nptr[i]))
     {
         number *= 10;
         number += nptr[i] - '0';
         i++;
     }
-    return (number * sign); // Return the converted integer with sign
+    return (number * sign);
 }
