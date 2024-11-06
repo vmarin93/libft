@@ -13,14 +13,20 @@
 #include <stddef.h>
 #include "libft.h"
 
+/*
+ * Returns the last node of the list.
+ *
+ * @param lst The beginning of the list.
+ * @return The last node of the list.
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*travel;
+    t_list	*travel;
 
-	if (!lst)
-		return (NULL);
-	travel = lst;
-	while (travel->next != NULL)
-		travel = travel->next;
-	return (travel);
+    if (!lst)
+        return (NULL);
+    travel = lst;
+    while (travel->next != NULL)
+        travel = travel->next;
+    return (travel);
 }
