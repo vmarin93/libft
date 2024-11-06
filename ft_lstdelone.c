@@ -14,11 +14,18 @@
 #include <stddef.h>
 #include "libft.h"
 
+/*
+ * Deletes the given node and frees the memory of the node's content using the
+ * function 'del' and free the node. The memory of 'next' must not be freed.
+ *
+ * @param lst The node to be deleted.
+ * @param del The function used to delete the content of the node.
+ */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
-	lst = NULL;
+    if (!lst || !del)
+        return ;
+    del(lst->content);
+    free(lst);
+    lst = NULL;
 }
